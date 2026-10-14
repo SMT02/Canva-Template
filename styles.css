@@ -1,0 +1,513 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-bg-color: #f4f1ed;
+    --secondary-bg-color: #efebe5;
+    --primary-font-color: #623e2a;
+    --secondary-font-color: white;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-font-color);
+}
+
+h1, h2 {
+  font-family: "GFS Didot", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2 {
+    font-size: 3.9rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+    font-weight: normal;
+}
+
+p {
+    line-height: 1.6;
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 1025px) {
+    h2 {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Header ---------------------------------------*/
+header {
+    position: relative;
+}
+
+.splashImg {
+    width: 100%;
+    height: 85vh;
+    object-fit: cover;
+}
+
+.splashImgContent {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    color: var(--secondary-font-color);
+    text-align: center;
+}
+
+.splashImgContent p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    word-spacing: 10px;
+    margin-bottom: 40px;
+}
+
+.splashImgContent h1 {
+    font-size: 8.3rem;
+    letter-spacing: 4px;
+}
+
+.splashImgContent h2 {
+    font-size: 3.3rem;
+}
+
+.splashImgContent button {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-font-color);
+    padding: 15px 60px;
+    margin-top: 90px;
+    border: none;
+    transition: color 0.3s, background-color 0.3s, opacity 3s;
+}
+
+.splashImgContent button:hover {
+    background-color: var(--primary-font-color);
+    color: var(--secondary-font-color);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 400px) {
+    .splashImgContent p {
+        font-size: 0.9rem;
+    }
+
+    .splashImgContent h1 {
+        font-size: 5rem;
+    }
+
+    .splashImgContent h2 {
+        font-size: 3rem;
+    }
+}
+
+/* Body --------------------------------------------------*/
+
+/* Narrow Content Wrapper */
+.narrowContent {
+    width: 60%;
+    margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .narrowContent {
+        width: 90%;
+    }
+}
+
+/* Two Column Content -------------*/
+.twoColumnContent {
+    display: flex;
+    margin: 100px 0;
+    justify-self: center;
+}
+
+.twoColumnText {
+    flex: 1;
+    margin-right: 70px;
+}
+
+.twoColumnText h2 {
+    margin: 60px 0;
+}
+
+.twoColumnText p {
+    font-size: 1.1rem;
+}
+
+.twoColumnImgWrapper {
+    flex: 1;
+}
+
+.twoColumnImgWrapper img {
+    width: 100%;
+    padding: 0 40px 0 70px;
+}
+
+@media only screen and (max-width: 1025px) {
+    .twoColumnContent {
+        flex-direction: column;
+    }
+
+    .twoColumnText {
+        margin: 0 0 50px 0;
+    }
+
+    .twoColumnImgWrapper img {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Accommodations Card Section ---------------------*/
+.cardSection {
+    background-color: var(--secondary-bg-color);
+    padding: 50px 0;
+}
+
+.cardSection h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: flex;
+}
+
+.card {
+    flex: 1;
+    display: flex; /* Allows all card text to have equal height so borders align */
+    flex-direction: column;
+}
+
+.card:nth-of-type(2) {
+    margin: 0 15px;
+}
+
+.card img {
+    width: 100%;
+}
+
+.cardText {
+    border: 1.5px solid var(--primary-font-color);
+    margin-top: 15px;
+    padding: 30px 20px;
+    flex-grow: 1; /* Allows all card text to have equal height so borders align */
+}
+
+.cardText h3 {
+    margin: 50px 0 10px 0;
+}
+
+@media only screen and (max-width: 1025px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .card:nth-of-type(2) {
+        margin: 30px 0;
+    }
+}
+
+/* Suite Section ------------------------------*/
+.twoColumnContent.suite {
+    padding: 60px 0 80px 0;
+}
+
+.twoColumnText.suite {
+    flex: 1;
+    font-size: 1rem;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.twoColumnText.suite h2 {
+    margin: 0 40px 60px 0;
+}
+
+.twoColumnText.suite p {
+    margin-right: 40px;
+    margin-top: auto;
+}
+
+.twoColumnImgWrapper.suite {
+    flex: 1.25;
+    padding: 0 30px 0 0;
+}
+
+.twoColumnImgWrapper.suite img {
+    padding: 0 0 20px 0;
+}
+
+.imgCaption {
+    border: 1px solid var(--primary-font-color);
+    font-size: 0.8rem;
+    font-style: italic;
+    text-align: center;
+    padding: 20px 10%;
+    flex-grow: 1;
+}
+
+.twoColumnImg1Wrapper, .twoColumnImg2Wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.twoColumnImg1Wrapper {
+    flex: 1;
+}
+
+.twoColumnImg1Wrapper img, .twoColumnImg2Wrapper img {
+    width: 100%;
+    /* height: 100%; */
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.twoColumnImg2Wrapper {
+    flex: 2;
+    margin-left: 30px;
+}
+
+@media only screen and (max-width: 1025px) {
+    .twoColumnText.suite {
+        margin-right: 0;
+    }
+
+    .twoColumnText.suite h2 {
+        margin: 0 0 60px 0;
+    }
+
+    .twoColumnText.suite p {
+        margin-right: 0;
+    }
+
+    .twoColumnImg2Wrapper {
+        margin: 30px 0 0 0;
+    }
+}
+
+/* Promo Section ----------------*/
+.card.promo h3 {
+    margin: 0 0 10px 0;
+}
+
+/* Press Section -----------------------------------------------------*/
+.pressSection {
+    position: relative;
+    background: url(img/Hotel-Hallway-Optimized.png) no-repeat center;
+    background-size: cover;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pressContent {
+    color: var(--secondary-font-color);
+}
+
+.pressContent h2 {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.pressPost:nth-of-type(2) {
+    margin: 0 100px;
+}
+
+.pressPostBodyText {
+    margin-bottom: 30px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.pressFlexContainer {
+    display: flex;
+}
+
+.quotationMark {
+    font-family: "GFS Didot", serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 3.9rem;
+}
+
+@media only screen and (max-width: 1025px) {
+    .pressContent {
+        margin: 100px auto;
+    }
+
+    .pressFlexContainer {
+        flex-direction: column;
+    }
+
+    .pressPost:nth-of-type(2) {
+        margin: 100px 0;
+    }
+} 
+
+/* Footer ----------------------------------------*/
+footer {
+    background-color: var(--primary-font-color);
+    color: var(--secondary-font-color);
+    padding: 150px 0;
+    min-height: 85vh;
+}
+
+footer h2 {
+    font-size: 2.7rem;
+    margin-bottom: 120px;
+}
+
+.card.footer {
+    border: 1px solid var(--secondary-font-color);
+    padding: 30px;
+}
+
+.card.footer:nth-of-type(2) {
+    margin: 0 70px;
+}
+
+.card.footer address {
+    font-style: normal;
+}
+
+.card.footer h3 {
+    margin-bottom: 25px;
+}
+
+.card.footer p {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+}
+
+.card.footer address p::before {
+    content: "";                 
+    display: inline-block;       
+    width: 20px;                 
+    height: 20px;                 
+    margin-right: 10px;
+    
+    background-size: contain;     
+    background-repeat: no-repeat;
+}
+
+.card.footer address p:nth-of-type(1)::before {
+    
+    background-image: url('img/Location.png');
+   
+} 
+
+.card.footer address p:nth-of-type(2)::before {
+   
+    background-image: url('img/Phone.png');
+}  
+
+.card.footer address p:nth-of-type(3)::before {
+   
+    background-image: url('img/Mail.png');
+    
+}
+
+.socialIconsWrapper {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.socialIconsWrapper img {
+    width: 44px;
+    height: 44px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.card.footer button {
+    background-color: transparent;
+    color: var(--secondary-font-color);
+    border: 1px solid var(--secondary-font-color);
+    border-radius: 50px;
+    padding: 20px;
+    font-style: italic;
+    font-size: 0.78rem;
+    margin-top: auto;
+    transition: all 0.3s;
+}
+
+.card.footer button:hover {
+    background-color: var(--secondary-font-color);
+    color: var(--primary-font-color);
+    border-color: var(--primary-font-color);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1600px) {
+    .card.footer:nth-of-type(2) {
+        margin: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 1025px) {
+    .card.footer:nth-of-type(2) {
+        margin: 35px 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    footer h2 {
+        text-align: center;
+    }
+}
+
+/* Animations -------------------------------------------*/
+.animateTransition {
+    transition: opacity 2s, translate 2s;
+}
+
+.animateFade {
+    opacity: 0;
+}
+
+.animateFromTop {
+    translate: 0 -50px;
+}
+
+.animateFromBottom {
+    translate: 0 50px;
+} 
+
+.animate {
+	opacity: 1;
+    translate: 0 0;
+}
