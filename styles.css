@@ -188,7 +188,7 @@ header {
 /* Accommodations Card Section ---------------------*/
 .cardSection {
     background-color: var(--secondary-bg-color);
-    padding: 50px 0;
+    padding: 75px 0;
 }
 
 .cardSection h2 {
